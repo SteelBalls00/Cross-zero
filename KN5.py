@@ -44,14 +44,14 @@ print('''Новая игра. Сетка представлена в виде п
 Для выбора клетки вам потребуется ввести цифру с ее номером.''')
 printab(but1) # начало игры
 
-last = None
+last = 2
 game = True
 while game: # цикл запуска функций для игры, который хз как остановить
-   turn(per='первого', znach='X')
+   if last == 2:
+      turn(per='первого', znach='X')
+      last = 1
+   elif last == 1:
+      turn(per='второго', znach='O')
+      last = 2
    printab(but2)
    game = check('X', user='игрок 1')
-   if not game:
-      break
-   turn(per='второго', znach='O')
-   printab(but2)
-   game = check('O', user='игрок 2')
