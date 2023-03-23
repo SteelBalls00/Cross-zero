@@ -46,7 +46,7 @@ printab(but1) # начало игры
 
 last = 2
 game = True
-while game: # цикл запуска функций для игры, который хз как остановить
+while game: # цикл запуска функций для игры
    if last == 2:
       turn(per='первого', znach='X')
       last = 1
